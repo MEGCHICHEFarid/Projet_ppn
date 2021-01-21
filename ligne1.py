@@ -42,13 +42,14 @@ def kCores(graph):
     for i in kcores.keys():
         for j in range(i+1 , k ):
               if k in (range(j,0)):
-                 kcores[i].extend(kcores[j])
-    
-    return k, kcores
+                  print(range(j,0))
+                  kcores[i].extend(kcores[j])
+                 
+    return  kcores
 
 
 def test1():
-    #print("== Test 1 ==:")
+    print("== Test 1 ==:")
     g = Graph()
     g.add_vertex(0, {1, 2})
     g.add_vertex(1, {0, 2,5})
@@ -59,11 +60,12 @@ def test1():
     g.add_vertex(6, {2 ,3 ,4 ,5 ,7 ,8})
     g.add_vertex(7, {3,4,6})
     g.add_vertex(8, {5,6})
+    
+
    
-    degeneresence, kcores = kCores(g)
+    for k, core in kCores(g).items():
+     print("{}-core: {}".format(k, core))
+  
     
-    #for k, core in kcores.items():
-    #    print("{}-core: {}".format(k, core))
-    
-    return degeneresence
+test1()
 
