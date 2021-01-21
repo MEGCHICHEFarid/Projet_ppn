@@ -61,11 +61,14 @@ def test1():
     g.add_vertex(7, {3,4,6})
     g.add_vertex(8, {5,6})
     
-
+    deg_list = [] 
+    
    
     for k, core in kCores(g).items():
-     print("{}-core: {}".format(k, core))
-  
+      print("{}-core: {}".format(k, core))
+      deg_list.extend(core)
+    print("la liste de degenerescence ",deg_list)
+
     
 test1()
 
