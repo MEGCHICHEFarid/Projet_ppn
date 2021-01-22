@@ -1,12 +1,12 @@
 
 from collections import defaultdict 
-from ligne1 import test1
+#from ligne1 import test1
  
 
 class Graph: 
  
     def __init__(self,vertices): 
-        self.V= vertices #No. of vertices 
+        self.V= vertices 
  
         
         self.graph= defaultdict(list) 
@@ -72,7 +72,7 @@ class Graph:
                         print ("-> " + str(i)),
                    
                    
-k = test1()
+k = 3
 g1 = Graph (9); 
 g1.addEdge(0, 1) 
 g1.addEdge(0, 2) 
